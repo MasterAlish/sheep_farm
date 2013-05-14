@@ -2,12 +2,13 @@
 
 class Brain {
     public static function init(){
+        session_start();
         ini_set('date.timezone', 'Asia/Bishkek');
         require_once('Smarty-3.1.13/libs/Smarty.class.php');
         require_once("system/TemplateProcessor.php");
         require_once("system/DatabaseProcessor.php");
         require_once("system/SheepFarm.php");
-
+        self::checkLocale();
         self::getConfigs();
     }
 
@@ -17,7 +18,6 @@ class Brain {
 
     public static function process($tp){
         $url = $_SERVER['REQUEST_URI'];
-        $host = $_SERVER['HTTP_HOST'];
         switch($url){
             case '/sheep/createDB':
                 SheepFarm::initDB();
@@ -37,6 +37,18 @@ class Brain {
         if(!DatabaseProcessor::connected()) return;
 
         $tp->assign('lambs',SheepFarm::getSheepCollection());
+    }
+
+    public static function checkLocale(){
+        if(empty($_SESSION['current_language'])){
+            $_SESSION['current_language']='en';
+        }
+        if(!empty($_REQUEST['lang'])){
+            if($_REQUEST['lang']=='ru')
+                $_SESSION['current_language']='ru';
+            else
+                $_SESSION['current_language']='en';
+        }
     }
 
     public static function finish(){

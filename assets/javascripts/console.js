@@ -98,7 +98,7 @@ function refreshFunction(){
 }
 
 function errorFunction(){
-    showErrorMessage("Incorrect command");
+    showErrorMessage($("#incorrect_command").val());
 }
 
 function getYardLength(yard){

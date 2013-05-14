@@ -1,6 +1,7 @@
 <html>
 <head>
-    <title>Farmer and Sheep</title>
+    <title>{$locale['title']}</title>
+    <meta charset="utf-8">
     <link href="/assets/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
     <link href="/assets/stylesheets/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/javascripts/jquery-1.9.1.min.js" type="text/javascript"></script>

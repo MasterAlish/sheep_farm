@@ -1,7 +1,7 @@
 Commands you can use:
 <ul>
-    <li>{$kill} [{$oldest}|{$youngest}] <i>(count)</i> {$from} {$yard} <i>(number)</i> - kill sheep from specified yard, <i>count</i> - count of killed sheep, <i>youngest</i> - kill youngest sheep, <i>oldest</i> - kill oldest sheep(default). </li>
-    <li>{$move}  <i>(count)</i> {$from} {$yard} <i>(number)</i> {$to} {$yard} <i>(number)</i> - moving sheep from yard to yard
-    <li>{$create} <i>(count)</i> {$sheep} {$in} {$yard} <i>(number)</i> - create sheep in specified yard
-    <li>{$refresh} - refresh
+    <li>{$kill} [{$oldest}|{$youngest}] <i>(count)</i> {$from} {$yard} <i>(number)</i> - Kill sheep from specified yard, <i>count</i> - count of killed sheep, <i>youngest</i> - kill youngest sheep, <i>oldest</i> - kill oldest sheep(default). </li>
+    <li>{$move}  <i>(count)</i> {$from} {$yard} <i>(number)</i> {$to} {$yard} <i>(number)</i> - Moving sheep from yard to yard
+    <li>{$create} <i>(count)</i> {$in} {$yard} <i>(number)</i> - Create sheep in specified yard
+    <li>{$refresh} - Refresh
 </ul>

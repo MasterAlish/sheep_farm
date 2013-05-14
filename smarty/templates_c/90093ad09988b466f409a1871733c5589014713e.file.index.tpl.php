@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 16:48:27
+<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 17:47:06
          compiled from "templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:431352405190dbbf719ce6-26647611%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '90093ad09988b466f409a1871733c5589014713e' => 
     array (
       0 => 'templates/index.tpl',
-      1 => 1368528506,
+      1 => 1368531995,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'killed' => 0,
+    'locale' => 0,
     'yard' => 0,
     'lambs' => 0,
   ),
@@ -33,8 +34,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </span>
             <div id="msg" class="hidden"></div>
             <div class="pull-right">
-                <input type="text" id="console" placeholder="Enter command here..">
-                <a id="refresh_page" href="#">Refresh</a>
+                <input type="text" id="console" placeholder="<?php echo $_smarty_tpl->tpl_vars['locale']->value['enter_command'];?>
+..">
+                <a id="refresh_page" href="#"><?php echo $_smarty_tpl->tpl_vars['locale']->value['refresh'];?>
+</a>
             </div>
         <div class="clr"></div>
     </div>
@@ -50,12 +53,14 @@ $_smarty_tpl->tpl_vars['yard']->first = $_smarty_tpl->tpl_vars['yard']->iteratio
         <div class="yard" id="yard<?php echo $_smarty_tpl->tpl_vars['yard']->value;?>
 ">
             <div class="name">
-                Yard <?php echo $_smarty_tpl->tpl_vars['yard']->value;?>
+                <?php echo $_smarty_tpl->tpl_vars['locale']->value['yard'];?>
+ <?php echo $_smarty_tpl->tpl_vars['yard']->value;?>
  <b>(<span id="count_yard<?php echo $_smarty_tpl->tpl_vars['yard']->value;?>
 "><?php if (!empty($_smarty_tpl->tpl_vars['lambs']->value)){?><?php echo count($_smarty_tpl->tpl_vars['lambs']->value[$_smarty_tpl->tpl_vars['yard']->value]);?>
 <?php }?></span>)</b>
                 <div class="pull-right"><a class="kill" id="<?php echo $_smarty_tpl->tpl_vars['yard']->value;?>
-">Kill All</a></div>
+"><?php echo $_smarty_tpl->tpl_vars['locale']->value['kill_all'];?>
+</a></div>
             </div>
             <div class="lamb_place" id="lamb_place<?php echo $_smarty_tpl->tpl_vars['yard']->value;?>
 ">

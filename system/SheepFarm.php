@@ -105,21 +105,12 @@ class SheepFarm {
 
     public static function getCommands(){
         $commands = array();
-        $commands["kill"]="kill";
-        $commands["from"]="from";
-        $commands["yard"]="yard";
-        $commands["move"]="move";
-        $commands["to"]="to";
-        $commands["create"]="create";
-        $commands["in"]="in";
-        $commands["youngest"]="youngest";
-        $commands["oldest"]="oldest";
-        $commands["refresh"]="refresh";
+        eval(file_get_contents("templates/{$_SESSION['current_language']}/commands.php"));
         return $commands;
     }
 
     public static function getHelp(){
-        $help = file_get_contents("templates/en/help.txt");
+        $help = file_get_contents("templates/{$_SESSION['current_language']}/help.txt");
         $commands = self::getCommands();
         foreach($commands as $com=>$local){
             $help = str_replace("{\${$com}}","<b>{$local}</b>",$help);

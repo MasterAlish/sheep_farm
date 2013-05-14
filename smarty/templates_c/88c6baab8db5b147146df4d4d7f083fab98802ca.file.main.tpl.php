@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 12:34:37
+<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 17:47:06
          compiled from "templates/main.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:19062758605190fb0be2dd16-47347584%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '88c6baab8db5b147146df4d4d7f083fab98802ca' => 
     array (
       0 => 'templates/main.tpl',
-      1 => 1368513181,
+      1 => 1368532020,
       2 => 'file',
     ),
   ),
@@ -17,11 +17,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.13',
   'unifunc' => 'content_5190fb0be80c41_09182500',
+  'variables' => 
+  array (
+    'locale' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5190fb0be80c41_09182500')) {function content_5190fb0be80c41_09182500($_smarty_tpl) {?><html>
 <head>
-    <title>Farmer and Sheep</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['locale']->value['title'];?>
+</title>
+    <meta charset="utf-8">
     <link href="/assets/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" />
     <link href="/assets/stylesheets/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
     <script src="/assets/javascripts/jquery-1.9.1.min.js" type="text/javascript"></script>

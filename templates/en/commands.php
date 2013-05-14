@@ -1,0 +1,10 @@
+$commands["kill"]="kill";
+$commands["from"]="from";
+$commands["yard"]="yard";
+$commands["move"]="move";
+$commands["to"]="to";
+$commands["create"]="create";
+$commands["in"]="in";
+$commands["youngest"]="youngest";
+$commands["oldest"]="oldest";
+$commands["refresh"]="refresh";

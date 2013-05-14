@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 16:47:27
+<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 18:23:31
          compiled from "templates/help.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1641690695191ce33ac1964-36227227%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1235deffe6fc3e01f10ab75ae0e704ff4c4addff' => 
     array (
       0 => 'templates/help.tpl',
-      1 => 1368528445,
+      1 => 1368534186,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'commands' => 0,
     'command' => 0,
     'local' => 0,
+    'locale' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -43,6 +44,8 @@ $_smarty_tpl->tpl_vars['local']->_loop = true;
 " value="<?php echo $_smarty_tpl->tpl_vars['local']->value;?>
 ">
             <?php } ?>
+                <input type="hidden" id="incorrect_command" value="<?php echo $_smarty_tpl->tpl_vars['locale']->value['incorrect_command'];?>
+">
         </div>
         <div class="clr"></div>
     </div>
