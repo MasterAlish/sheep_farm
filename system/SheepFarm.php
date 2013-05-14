@@ -3,7 +3,7 @@
 class SheepFarm {
     public static function initDB(){
         GLOBAL $mysql;
-        $dropDB="drop database If EXISTS farm";
+        $dropDB="drop database If EXISTS {$mysql['db_name']}";
         $createDB="create database {$mysql['db_name']};";
         $createTable="create table IF NOT EXISTS sheep(
                       id int primary key AUTO_INCREMENT,
