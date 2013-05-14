@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 12:11:08
+<?php /* Smarty version Smarty-3.1.13, created on 2013-05-14 16:47:27
          compiled from "templates/help.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1641690695191ce33ac1964-36227227%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '1235deffe6fc3e01f10ab75ae0e704ff4c4addff' => 
     array (
       0 => 'templates/help.tpl',
-      1 => 1368511866,
+      1 => 1368528445,
       2 => 'file',
     ),
   ),
@@ -29,8 +29,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_5191ce33acded9_08751344')) {function content_5191ce33acded9_08751344($_smarty_tpl) {?><div class="farm">
     <div class="align">
         <div class="clr"></div>
-            <?php echo $_smarty_tpl->tpl_vars['help']->value;?>
-
+            <?php if (!empty($_smarty_tpl->tpl_vars['help']->value)){?><?php echo $_smarty_tpl->tpl_vars['help']->value;?>
+<?php }?>
         <div class="hidden">
             <?php  $_smarty_tpl->tpl_vars['local'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['local']->_loop = false;
  $_smarty_tpl->tpl_vars['command'] = new Smarty_Variable;

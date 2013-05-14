@@ -20,7 +20,7 @@ function  initAutoRefreshing(){
                 var $new = JSON.parse($newGeneration);
                 for($i=1;$i<=4;$i++){
                     raiseSheepCount($i,$new[$i]);
-                    $("#count_yard"+$i).text(parseInt($("#count_yard"+$i).text())+$new[$i]);
+                    fixYardSheepCount();
                 }
             }
         });

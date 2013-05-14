@@ -31,10 +31,12 @@ class Brain {
                 if(strpos($url,'/sheep/console/create')===0) {SheepFarm::createCommand(); break;}
                 break;
         }
-
-        $tp->assign('lambs',SheepFarm::getSheepCollection());
         $tp->assign('commands',SheepFarm::getCommands());
         $tp->assign('help',SheepFarm::getHelp());
+
+        if(!DatabaseProcessor::connected()) return;
+
+        $tp->assign('lambs',SheepFarm::getSheepCollection());
     }
 
     public static function finish(){

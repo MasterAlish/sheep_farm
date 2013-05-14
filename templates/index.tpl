@@ -18,13 +18,15 @@
     {for $yard=1 to 4}
         <div class="yard" id="yard{$yard}">
             <div class="name">
-                Yard {$yard} <b>(<span id="count_yard{$yard}">{$lambs[$yard]|@count}</span>)</b>
+                Yard {$yard} <b>(<span id="count_yard{$yard}">{if not empty($lambs)}{$lambs[$yard]|@count}{/if}</span>)</b>
                 <div class="pull-right"><a class="kill" id="{$yard}">Kill All</a></div>
             </div>
             <div class="lamb_place" id="lamb_place{$yard}">
+                {if not empty($lambs)}
                 {foreach from=$lambs[$yard] item=lamb}
                     <div class="lamb"></div>
                 {/foreach}
+                {/if}
             </div>
         </div>
     {/for}
